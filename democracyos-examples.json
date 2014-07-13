@@ -1,0 +1,157 @@
+# Another replied to your argument
+{
+    "verb": "reply",
+    "published": "2014-08-01T15:04:55Z",
+    "language": "en",
+    "actor": {
+        "objectType": "person",
+        "id": "http://demo.democracyos.org/citizen/23958abcfee48234993f27ed6a",
+        "displayName": "Guido Vilariño",
+        "url": null,
+        "image": {
+            "url": "http://gravatar.com/vilarino",
+            "mediaType": "image/jpeg",
+            "width": 64,
+            "height": 64
+        }
+    },
+    "object": {
+        "objectType": "comment",
+        "id": "http://demo.democracyos.org/argument/b39428f78ae898d798d7c/1",
+        "url": "http://demo.democracyos.org/law/81938102398019283019#b39428f78ae898d798d7c/1",
+        "displayName": null,
+        "content": "¡Qué buena idea!"
+    },
+    "target": {
+        "objectType": "argument",
+        "id": "http://demo.democracyos.org/argument/b39428f78ae898d798d7c",
+        "displayName": null,
+        "url": "http://demo.democracyos.org/law/81938102398019283019#b39428f78ae898d798d7c"
+    }
+},
+# Law voting closed
+{
+    "verb": "close",
+    "published": "2014-07-01T12:04:55Z",
+    "language": "es",
+    "actor": {
+        "objectType": "law",
+        "id": "http://dos.partidodelared.org/law/5385ed2c2dec0e3200fbdedb",
+        "displayName": "Nuevo Edificio para el Archivo General de la Nación",
+        "url": "http://dos.partidodelared.org/law/5385ed2c2dec0e3200fbdedb",
+        "image": null
+    },
+    "tally": [
+        {
+            "vote": "yes",
+            "count": 97,
+        }, {
+            "vote": "no",
+            "count": 9,
+        }, {
+            "vote": "abstain",
+            "count": 5,
+        }
+    ],
+    "result": "yes",
+},
+
+#
+# Decisions API
+#
+
+# Issue was added to a meeting agenda
+{
+    "verb": "add",
+    "published": "2014-07-01T12:04:55Z",
+    "actor": {
+        "objectType": "decisionmaker",
+        "id": "urn:hel.fi:decisionmaker:02900",
+        "displayName": {
+            "fi": "Kaupunginvaltuusto",
+            "sv": "Kommunfullmäktige",
+            "en": "City Council",
+        },
+        "url": "http://dev.hel.fi/paatokset/paattaja/kvsto/",
+    },
+    "object": {
+        "objectType": "issue",
+        "id": "urn:hel.fi:issue:hel-2014-001465",
+        "displayName": {
+            "fi": "Teollisuuskatu 23-25:n muutos- ja perusparannustyön hankesuunnitelma"
+        },
+        "url": "http://dev.hel.fi/paatokset/asia/hel-2014-001465/",
+    },
+    "target": {
+        "objectType": "meeting",
+        "id": "urn:hel.fi:meeting:02900-2014-11",
+        "url": "http://dev.hel.fi/paatokset/paattaja/kvsto/2014/11/"
+    }
+    "result": {
+        "objectType": "agenda_item",
+        "id": "urn:hel.fi:agenda_item:348239",
+        "url": "http://dev.hel.fi/paatokset/asia/hel-2014-001465/kvsto-2014-11/",
+        "displayName": {
+            "fi": "Teollisuuskatu 23-25:n muutos- ja perusparannustyön hankesuunnitelma",
+        },
+    },
+},
+
+# New issue is raised (?)
+
+# Decisionmaker makes a decision on an agenda_item
+{
+    "verb": "decide",
+    "published": "2014-07-12T12:04:55Z",
+    "actor": {
+        "objectType": "decisionmaker",
+        "id": "urn:hel.fi:decisionmaker:02900",
+        "displayName": {
+            "fi": "Kaupunginvaltuusto",
+            "sv": "Kommunfullmäktige",
+        },
+        "url": "http://dev.hel.fi/paatokset/paattaja/kvsto/"
+    },
+    "object": {
+        "objectType": "agenda_item",
+        "id": "urn:hel.fi:agenda_item:348239",
+        "url": "http://dev.hel.fi/paatokset/asia/hel-2014-001465/kvsto-2014-11/"
+    },
+    "target": {
+        "objectType": "issue",
+        "id": "urn:hel.fi:issue:hel-2014-001465",
+        "displayName": {
+            "fi": "Teollisuuskatu 23-25:n muutos- ja perusparannustyön hankesuunnitelma"
+        },
+        "url": "http://dev.hel.fi/paatokset/asia/hel-2014-001465/",
+    }
+    "result": {
+        "resolution": "passed_modified",
+        "content": "Kaupunginvaltuusto päätti kaupunginhallituksen ehdotuksen mukaisesti hyväksyä 29.1.2014 päivätyn Teollisuuskatu 23-25:n muutostyön hankesuunnitelman siten, että hankkeen enimmäislaajuus on 26 543 brm² ja rakentamiskustannusten enimmäishinta arvonlisäverottomana 43 miljoonaa euroa joulukuun 2013 kustannustasossa."
+    },
+}
+
+# Member of the city council votes on a motion
+{
+    "verb": "vote",
+    "published": "2014-07-12T12:04:55Z",
+    "actor": {
+        "objectType": "person",
+        "id": "urn:hel.fi:person:44d00b33af17795d5298",
+        "displayName": "Zahra Abdulla",
+        "party": "vihr",
+        "url": "http://dev.hel.fi/paatokset/henkilo/abdulla-zahra/"
+    },
+    "object": {
+        "objectType": "agenda_item",
+        "id": "urn:hel.fi:agenda_item:348239",
+        "url": "http://dev.hel.fi/paatokset/asia/hel-2014-001465/kvsto-2014-11/",
+        "motion": {
+            "yes": "Esityksen mukaan",
+            "no": "Kohta 7:\nViimeinen lause muutetaan muotoon:\nInvestoimalla olemassa oleviin kivihiilikattiloihin voidaan arvioiden mukaan polttaa pellettiä ilman merkittäviä tuotantotehon..."
+        }
+    },
+    "result": {
+        "vote": "yes",
+    }
+}
